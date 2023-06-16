@@ -1,10 +1,11 @@
 import GlobalStyle from "../../styles/global.js";
-import { Container, Content } from "./estilos.js";
+import { Container, Content, Button } from "../../styles/styles.js";
 import { uniqueId } from "lodash";
 import Upload from "@/components/upload/index2.js";
 import FileList from "../components/fileList/index.js";
 import React, { useEffect, useState } from "react";
 import api from "../services/api.js";
+import ResponsiveAppBar from "@/components/navbar/index.js";
 
 export default function Home() {
   const [uploadedFiles, setUploadedFiles] = useState([]);
@@ -93,12 +94,13 @@ export default function Home() {
 
   return (
     <>
+      <ResponsiveAppBar />
       <Container>
         <Content>
           <Upload onUpload={handleUpload} />
-          <button style={{ marginTop: 10 }} onClick={ComponenetDidMount}>
+          <Button style={{ marginTop: 10 }} onClick={ComponenetDidMount}>
             Gerar QRcodes
-          </button>
+          </Button>
           {!!uploadedFiles.length && (
             <FileList
               files={uploadedFiles}

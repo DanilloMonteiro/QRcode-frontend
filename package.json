@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.2",
     "axios": "^1.4.0",
     "filesize": "^10.0.7",
     "googleapis": "^118.0.0",
